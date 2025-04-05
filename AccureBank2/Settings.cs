@@ -106,5 +106,10 @@ namespace AccureBank2
             Obj.Show();
             this.Hide();
         }
+        private void ResetBtn_Click(object sender, EventArgs e)
+        {
+            BalanceLbl.Text = "Your Balance"; // Reset the label text
+            CheckBalTb.Text = ""; // Optionally clear the account number textbox
+        }
     }
 }
