@@ -1,4 +1,4 @@
-﻿using Microsoft.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,7 +37,7 @@ namespace AccureBank2
 
         private void CheckAvailableBalance()
         {
-            Con.Open();
+            //Con.Open();
             string Query = "select * from AccountTbl where AcNum = " + FromTb.Text + "";
             SqlCommand cmd = new SqlCommand(Query, Con);
             DataTable dt = new DataTable();
@@ -48,13 +48,13 @@ namespace AccureBank2
                 BalanceLabel.Text = "$" + dr["AcBalance"].ToString();
                 Balance = Convert.ToInt32(dr["AcBalance"].ToString());
             }
-            Con.Close();
+            //Con.Close();
         }
 
         private void GetNewBalance(string text)
         {
             Con.Open();
-            string Query = "select * from AccountTbl where AcNum = @AcNum" + CheckBalTb.Text + "";
+            string Query = "select * from AccountTbl where AcNum = " + CheckBalTb.Text + "";
             SqlCommand cmd = new SqlCommand(Query, Con);
             cmd.Parameters.AddWithValue("@AcNum", CheckBalTb.Text);
             DataTable dt = new DataTable();
@@ -129,43 +129,43 @@ namespace AccureBank2
             }
         }
 
-        //private void AddBalance()
-        //{
-        //    GetNewBalance(ToTb.Text);
-        //    int newBalance = Balance + Convert.ToInt32(TransAmountTb.Text);
-        //    try
-        //    {
-        //        Con.Open();
-        //        SqlCommand cmd = new SqlCommand("Update AccountTbl set AcBalance=@AB where AcNum=@AcKey", Con);
-        //        cmd.Parameters.AddWithValue("@AB", newBalance);
-        //        cmd.Parameters.AddWithValue("@AcKey", ToTb.Text);
-        //        cmd.ExecuteNonQuery();
-        //        Con.Close();
-        //    }
-        //    catch (Exception Ex)
-        //    {
-        //        MessageBox.Show(Ex.Message);
-        //    }
-        //}
+        private void AddBalance()
+        {
+            GetNewBalance(ToTb.Text);
+            int newBalance = Balance + Convert.ToInt32(TransAmountTb.Text);
+            try
+            {
+                Con.Open();
+                SqlCommand cmd = new SqlCommand("Update AccountTbl set AcBalance=@AB where AcNum=@AcKey", Con);
+                cmd.Parameters.AddWithValue("@AB", newBalance);
+                cmd.Parameters.AddWithValue("@AcKey", ToTb.Text);
+                cmd.ExecuteNonQuery();
+                Con.Close();
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+        }
 
-        //private void SubtractBalance()
-        //{
-        //    GetNewBalance(FromTb.Text);
-        //    int newBalance = Balance - Convert.ToInt32(TransAmountTb.Text);
-        //    try
-        //    {
-        //        Con.Open();
-        //        SqlCommand cmd = new SqlCommand("Update AccountTbl set AcBalance=@AB where AcNum=@AcKey", Con);
-        //        cmd.Parameters.AddWithValue("@AB", newBalance);
-        //        cmd.Parameters.AddWithValue("@AcKey", FromTb.Text);
-        //        cmd.ExecuteNonQuery();
-        //        Con.Close();
-        //    }
-        //    catch (Exception Ex)
-        //    {
-        //        MessageBox.Show(Ex.Message);
-        //    }
-        //}
+        private void SubtractBalance()
+        {
+            GetNewBalance(FromTb.Text);
+            int newBalance = Balance - Convert.ToInt32(TransAmountTb.Text);
+            try
+            {
+                Con.Open();
+                SqlCommand cmd = new SqlCommand("Update AccountTbl set AcBalance=@AB where AcNum=@AcKey", Con);
+                cmd.Parameters.AddWithValue("@AB", newBalance);
+                cmd.Parameters.AddWithValue("@AcKey", FromTb.Text);
+                cmd.ExecuteNonQuery();
+                Con.Close();
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+        }
 
         private void DepositBtn_Click(object sender, EventArgs e)
         {
@@ -296,23 +296,28 @@ namespace AccureBank2
 
         private void Transfer()
         {
-            try
-            {
-                Con.Open();
-                SqlCommand cmd = new SqlCommand("insert into TransferTbl(TrSource,TrDestination,TrAmount,TrDate)values(@TS,@TDS,@TA,@TD)", Con);
-                cmd.Parameters.AddWithValue("@TS", FromTb.Text);
-                cmd.Parameters.AddWithValue("@TDS", ToTb.Text);
-                cmd.Parameters.AddWithValue("@TA", TransAmountTb.Text);
-                cmd.Parameters.AddWithValue("@TD", DateTime.Now.Date);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Transfer successful!");
-                Con.Close();
-            }
-            catch (Exception Ex)
-            {
-                MessageBox.Show(Ex.Message);
-                Con.Close();
-            }
+            Con.Open();
+            SqlCommand cmd = new SqlCommand("insert into TransferTbl(TrSource,TrDestination,TrAmount,TrDate)values(@TS,@TDS,@TA,@TD)", Con);
+            cmd.Parameters.AddWithValue("@TS", FromTb.Text);
+            cmd.Parameters.AddWithValue("@TDS", ToTb.Text);
+            cmd.Parameters.AddWithValue("@TA", TransAmountTb.Text);
+            cmd.Parameters.AddWithValue("@TD", DateTime.Now.Date);
+            cmd.ExecuteNonQuery();
+
+            // Update the source account balance
+            SqlCommand updateSourceCmd = new SqlCommand("Update AccountTbl set AcBalance = AcBalance - @TA where AcNum = @TS", Con);
+            updateSourceCmd.Parameters.AddWithValue("@TA", TransAmountTb.Text);
+            updateSourceCmd.Parameters.AddWithValue("@TS", FromTb.Text);
+            updateSourceCmd.ExecuteNonQuery();
+
+            // Update the destination account balance
+            SqlCommand updateDestCmd = new SqlCommand("Update AccountTbl set AcBalance = AcBalance + @TA where AcNum = @TDS", Con);
+            updateDestCmd.Parameters.AddWithValue("@TA", TransAmountTb.Text);
+            updateDestCmd.Parameters.AddWithValue("@TDS", ToTb.Text);
+            updateDestCmd.ExecuteNonQuery();
+
+            MessageBox.Show("Transfer successful!");
+            Con.Close();
         }
         private void TransferBtn_Click(object sender, EventArgs e)
         {
@@ -349,6 +354,12 @@ namespace AccureBank2
             Settings Obj = new Settings();
             Obj.Show();
             this.Hide();
+        }
+
+        private void ResetBtn_Click(object sender, EventArgs e)
+        {
+            BalanceLbl.Text = "Your Balance"; // Reset the label text
+            CheckBalTb.Text = ""; // Optionally clear the account number textbox
         }
     }
 }
