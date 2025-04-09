@@ -57,6 +57,7 @@ namespace AccureBank2
             }
             else
             {
+                panel1.BackColor = Color.Goldenrod;
             }
         }
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\13309\OneDrive - Youngstown State University\Documents\Bank.Db.mdf"";Integrated Security=True;Connect Timeout=30");
@@ -105,11 +106,6 @@ namespace AccureBank2
             Transactions Obj = new Transactions();
             Obj.Show();
             this.Hide();
-        }
-        private void ResetBtn_Click(object sender, EventArgs e)
-        {
-            BalanceLbl.Text = "Your Balance"; // Reset the label text
-            CheckBalTb.Text = ""; // Optionally clear the account number textbox
         }
     }
 }

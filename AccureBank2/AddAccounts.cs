@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using Microsoft.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,6 +16,7 @@ namespace AccureBank2
         public AddAccounts()
         {
             InitializeComponent();
+            AccountDGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             DisplayAccounts();
         }
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\13309\OneDrive - Youngstown State University\Documents\Bank.Db.mdf"";Integrated Security=True;Connect Timeout=30");
@@ -101,22 +102,26 @@ namespace AccureBank2
         int Key = 0;
         private void AccountDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            var selectedRow = AccountDGV.SelectedRows[0];
-            AcNameTb.Text = AccountDGV.SelectedRows[0].Cells[1].Value.ToString();
-            AcPhoneTb.Text = AccountDGV.SelectedRows[0].Cells[2].Value.ToString();
-            AcAddressTb.Text = AccountDGV.SelectedRows[0].Cells[3].Value.ToString();
-            GenderCb.SelectedItem = AccountDGV.SelectedRows[0].Cells[4].Value.ToString();
-            OccupationTb.Text = AccountDGV.SelectedRows[0].Cells[5].Value.ToString();
-            EducationCb.SelectedItem = AccountDGV.SelectedRows[0].Cells[6].Value.ToString();
-            IncomeTb.Text = AccountDGV.SelectedRows[0].Cells[7].Value.ToString();
-            Key = string.IsNullOrEmpty(AcNameTb.Text) ? 0 : Convert.ToInt32(selectedRow.Cells[0].Value.ToString());
-            if (AcNameTb.Text == "")
+            if (e.RowIndex >= 0)
             {
-                Key = 0;
-            }
-            else
-            {
-                Key = Convert.ToInt32(AccountDGV.SelectedRows[0].Cells[0].Value.ToString());
+                // Get the selected row based on the clicked cell
+                DataGridViewRow selectedRow = AccountDGV.Rows[e.RowIndex];
+                AcNameTb.Text = AccountDGV.SelectedRows[0].Cells[1].Value.ToString();
+                AcPhoneTb.Text = AccountDGV.SelectedRows[0].Cells[2].Value.ToString();
+                AcAddressTb.Text = AccountDGV.SelectedRows[0].Cells[3].Value.ToString();
+                GenderCb.SelectedItem = AccountDGV.SelectedRows[0].Cells[4].Value.ToString();
+                OccupationTb.Text = AccountDGV.SelectedRows[0].Cells[6].Value.ToString();
+                EducationCb.SelectedItem = AccountDGV.SelectedRows[0].Cells[5].Value.ToString();
+                IncomeTb.Text = AccountDGV.SelectedRows[0].Cells[7].Value.ToString();
+                Key = string.IsNullOrEmpty(AcNameTb.Text) ? 0 : Convert.ToInt32(selectedRow.Cells[0].Value.ToString());
+                if (AcNameTb.Text == "")
+                {
+                    Key = 0;
+                }
+                else
+                {
+                    Key = Convert.ToInt32(AccountDGV.SelectedRows[0].Cells[0].Value.ToString());
+                }
             }
         }
 

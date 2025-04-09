@@ -1,4 +1,4 @@
-using Microsoft.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -360,6 +360,13 @@ namespace AccureBank2
         {
             BalanceLbl.Text = "Your Balance"; // Reset the label text
             CheckBalTb.Text = ""; // Optionally clear the account number textbox
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            TransactionHistory transactionHistoryForm = new TransactionHistory();
+            transactionHistoryForm.Show();
+            this.Hide();
         }
     }
 }

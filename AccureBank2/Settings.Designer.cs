@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            label15 = new Label();
             label10 = new Label();
             pictureBox5 = new PictureBox();
             label11 = new Label();
@@ -44,7 +45,6 @@
             pictureBox2 = new PictureBox();
             button2 = new Button();
             label5 = new Label();
-            label15 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -67,6 +67,16 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(125, 649);
             panel1.TabIndex = 1;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Font = new Font("Segoe Script", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label15.Location = new Point(23, 235);
+            label15.Name = "label15";
+            label15.Size = new Size(81, 23);
+            label15.TabIndex = 68;
+            label15.Text = "Accounts";
             // 
             // label10
             // 
@@ -172,7 +182,7 @@
             // ThemeCb
             // 
             ThemeCb.FormattingEnabled = true;
-            ThemeCb.Items.AddRange(new object[] { "Red", "Blue", "Green", "Black", "Hot Pink" });
+            ThemeCb.Items.AddRange(new object[] { "Red", "Blue", "Green", "Black", "Hot Pink", "Goldenrod" });
             ThemeCb.Location = new Point(234, 229);
             ThemeCb.Name = "ThemeCb";
             ThemeCb.Size = new Size(382, 28);
@@ -226,16 +236,6 @@
             label5.TabIndex = 40;
             label5.Text = "Reset";
             label5.Click += label5_Click;
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Font = new Font("Segoe Script", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label15.Location = new Point(23, 235);
-            label15.Name = "label15";
-            label15.Size = new Size(81, 23);
-            label15.TabIndex = 68;
-            label15.Text = "Accounts";
             // 
             // Settings
             // 

@@ -42,5 +42,19 @@ namespace AccureBank2
         {
             Application.Exit();
         }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            DebitCard Obj = new DebitCard();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            Agents Obj = new Agents();
+            Obj.Show();
+            this.Hide();
+        }
     }
 }

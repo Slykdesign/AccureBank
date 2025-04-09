@@ -150,5 +150,12 @@ namespace AccureBank2
             Settings Obj = new Settings();
             Obj.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            MainMenu Obj = new MainMenu();
+            Obj.Show();
+            this.Hide();
+        }
     }
 }

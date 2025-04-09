@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agents));
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             CancelBtn = new Button();
             EditBtn = new Button();
             SubmitBtn = new Button();
@@ -43,7 +44,9 @@
             ANameTb = new TextBox();
             label1 = new Label();
             panel1 = new Panel();
+            label10 = new Label();
             pictureBox4 = new PictureBox();
+            pictureBox1 = new PictureBox();
             APasswordTb = new TextBox();
             AgentDGV = new Guna.UI2.WinForms.Guna2DataGridView();
             pictureBox2 = new PictureBox();
@@ -51,6 +54,7 @@
             SettingsLbl = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)AgentDGV).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -169,21 +173,44 @@
             // panel1
             // 
             panel1.BackColor = Color.Goldenrod;
+            panel1.Controls.Add(label10);
             panel1.Controls.Add(pictureBox4);
+            panel1.Controls.Add(pictureBox1);
             panel1.Location = new Point(-19, -26);
             panel1.Name = "panel1";
             panel1.Size = new Size(128, 649);
             panel1.TabIndex = 40;
             // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe Script", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label10.Location = new Point(21, 128);
+            label10.Name = "label10";
+            label10.Size = new Size(102, 23);
+            label10.TabIndex = 66;
+            label10.Text = "Main Menu";
+            // 
             // pictureBox4
             // 
-            pictureBox4.Image = Properties.Resources.transactions;
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
             pictureBox4.Location = new Point(31, 38);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(80, 75);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 16;
             pictureBox4.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.bank;
+            pictureBox1.Location = new Point(31, 154);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(70, 54);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 65;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // APasswordTb
             // 
@@ -194,26 +221,26 @@
             // 
             // AgentDGV
             // 
-            dataGridViewCellStyle7.BackColor = Color.White;
-            AgentDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = Color.DarkOrange;
-            dataGridViewCellStyle8.Font = new Font("Segoe Script", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle8.ForeColor = Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
-            AgentDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            AgentDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.DarkOrange;
+            dataGridViewCellStyle2.Font = new Font("Segoe Script", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            AgentDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             AgentDGV.ColumnHeadersHeight = 25;
             AgentDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = Color.White;
-            dataGridViewCellStyle9.Font = new Font("Segoe Script", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle9.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle9.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle9.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.False;
-            AgentDGV.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe Script", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            AgentDGV.DefaultCellStyle = dataGridViewCellStyle3;
             AgentDGV.GridColor = Color.FromArgb(231, 229, 255);
             AgentDGV.Location = new Point(115, 305);
             AgentDGV.Name = "AgentDGV";
@@ -303,7 +330,9 @@
             Name = "Agents";
             Text = "Agents";
             panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)AgentDGV).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
@@ -333,5 +362,7 @@
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
         private Label SettingsLbl;
+        private Label label10;
+        private PictureBox pictureBox1;
     }
 }

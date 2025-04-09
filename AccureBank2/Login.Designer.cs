@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            label4 = new Label();
+            pictureBox4 = new PictureBox();
             label1 = new Label();
             UsernameTb = new TextBox();
             label2 = new Label();
@@ -39,12 +41,10 @@
             RoleCb = new ComboBox();
             label5 = new Label();
             pictureBox3 = new PictureBox();
-            pictureBox4 = new PictureBox();
-            label4 = new Label();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -57,6 +57,26 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(262, 426);
             panel1.TabIndex = 0;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe Script", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(30, 276);
+            label4.Name = "label4";
+            label4.Size = new Size(206, 36);
+            label4.TabIndex = 59;
+            label4.Text = "Hayden M. Slyk";
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = Properties.Resources.bank;
+            pictureBox4.Location = new Point(46, 72);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(170, 198);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 0;
+            pictureBox4.TabStop = false;
             // 
             // label1
             // 
@@ -99,7 +119,7 @@
             // 
             PasswordTb.Location = new Point(390, 230);
             PasswordTb.Name = "PasswordTb";
-            PasswordTb.PasswordChar = '"';
+            PasswordTb.PasswordChar = '*';
             PasswordTb.Size = new Size(346, 27);
             PasswordTb.TabIndex = 5;
             // 
@@ -157,26 +177,6 @@
             pictureBox3.TabStop = false;
             pictureBox3.Click += pictureBox3_Click;
             // 
-            // pictureBox4
-            // 
-            pictureBox4.Image = Properties.Resources.bank;
-            pictureBox4.Location = new Point(46, 72);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(170, 198);
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 0;
-            pictureBox4.TabStop = false;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe Script", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(30, 276);
-            label4.Name = "label4";
-            label4.Size = new Size(206, 36);
-            label4.TabIndex = 59;
-            label4.Text = "Hayden M. Slyk";
-            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -199,9 +199,9 @@
             Text = "Login";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
