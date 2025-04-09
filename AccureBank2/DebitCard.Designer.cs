@@ -38,12 +38,26 @@
             pictureBox6 = new PictureBox();
             pictureBox7 = new PictureBox();
             pictureBox4 = new PictureBox();
+            label2 = new Label();
+            panel2 = new Panel();
+            label4 = new Label();
+            NewCardNumTb = new TextBox();
+            comboBox1 = new ComboBox();
+            label3 = new Label();
+            label18 = new Label();
+            cancelBtn = new Button();
+            applyBtn = new Button();
+            CardNumTb = new TextBox();
+            label5 = new Label();
+            label6 = new Label();
+            AcNumTb = new TextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -157,11 +171,150 @@
             pictureBox4.TabIndex = 16;
             pictureBox4.TabStop = false;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe Script", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(371, 12);
+            label2.Name = "label2";
+            label2.Size = new Size(396, 48);
+            label2.TabIndex = 4;
+            label2.Text = "Debit Card Assignment";
+            // 
+            // panel2
+            // 
+            panel2.BorderStyle = BorderStyle.FixedSingle;
+            panel2.Controls.Add(label4);
+            panel2.Controls.Add(NewCardNumTb);
+            panel2.Controls.Add(comboBox1);
+            panel2.Controls.Add(label3);
+            panel2.Controls.Add(label18);
+            panel2.Controls.Add(cancelBtn);
+            panel2.Controls.Add(applyBtn);
+            panel2.Controls.Add(CardNumTb);
+            panel2.Controls.Add(label5);
+            panel2.Controls.Add(label6);
+            panel2.Controls.Add(AcNumTb);
+            panel2.Location = new Point(221, 82);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(696, 324);
+            panel2.TabIndex = 54;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe Script", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(47, 197);
+            label4.Name = "label4";
+            label4.Size = new Size(194, 29);
+            label4.TabIndex = 59;
+            label4.Text = "New Card Number:";
+            // 
+            // NewCardNumTb
+            // 
+            NewCardNumTb.Location = new Point(247, 198);
+            NewCardNumTb.Name = "NewCardNumTb";
+            NewCardNumTb.Size = new Size(181, 27);
+            NewCardNumTb.TabIndex = 58;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Assign", "Reassign", "Cancel" });
+            comboBox1.Location = new Point(247, 96);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(181, 28);
+            comboBox1.TabIndex = 57;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe Script", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(93, 147);
+            label3.Name = "label3";
+            label3.Size = new Size(148, 29);
+            label3.TabIndex = 56;
+            label3.Text = "Card Number:";
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Font = new Font("Segoe Script", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label18.Location = new Point(159, 96);
+            label18.Name = "label18";
+            label18.Size = new Size(82, 29);
+            label18.TabIndex = 54;
+            label18.Text = "Action:";
+            // 
+            // cancelBtn
+            // 
+            cancelBtn.BackColor = Color.Red;
+            cancelBtn.Font = new Font("Segoe Script", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cancelBtn.ForeColor = Color.Transparent;
+            cancelBtn.Location = new Point(405, 270);
+            cancelBtn.Name = "cancelBtn";
+            cancelBtn.Size = new Size(115, 38);
+            cancelBtn.TabIndex = 50;
+            cancelBtn.Text = "Cancel";
+            cancelBtn.UseVisualStyleBackColor = false;
+            cancelBtn.Click += cancelBtn_Click;
+            // 
+            // applyBtn
+            // 
+            applyBtn.BackColor = Color.ForestGreen;
+            applyBtn.Font = new Font("Segoe Script", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            applyBtn.ForeColor = Color.Transparent;
+            applyBtn.Location = new Point(157, 270);
+            applyBtn.Name = "applyBtn";
+            applyBtn.Size = new Size(115, 38);
+            applyBtn.TabIndex = 50;
+            applyBtn.Text = "Apply";
+            applyBtn.UseVisualStyleBackColor = false;
+            applyBtn.Click += applyBtn_Click;
+            // 
+            // CardNumTb
+            // 
+            CardNumTb.Location = new Point(247, 149);
+            CardNumTb.Name = "CardNumTb";
+            CardNumTb.Size = new Size(181, 27);
+            CardNumTb.TabIndex = 53;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe Script", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(60, 42);
+            label5.Name = "label5";
+            label5.Size = new Size(181, 29);
+            label5.TabIndex = 50;
+            label5.Text = "Account Number:";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe Script", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.FromArgb(192, 64, 0);
+            label6.Location = new Point(15, 13);
+            label6.Name = "label6";
+            label6.Size = new Size(105, 29);
+            label6.TabIndex = 37;
+            label6.Text = "New Card";
+            // 
+            // AcNumTb
+            // 
+            AcNumTb.Location = new Point(247, 44);
+            AcNumTb.Name = "AcNumTb";
+            AcNumTb.Size = new Size(181, 27);
+            AcNumTb.TabIndex = 36;
+            // 
             // DebitCard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1262, 508);
+            BackColor = Color.LightGray;
+            ClientSize = new Size(1009, 508);
+            Controls.Add(panel2);
+            Controls.Add(label2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "DebitCard";
@@ -173,7 +326,10 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -188,5 +344,19 @@
         private PictureBox pictureBox6;
         private PictureBox pictureBox7;
         private PictureBox pictureBox4;
+        private Label label2;
+        private Panel panel2;
+        private Label label4;
+        private Button applyBtn;
+        private TextBox CardNumTb;
+        private Label label5;
+        private Label label6;
+        private TextBox AcNumTb;
+        private Button cancelBtn;
+        private Label label13;
+        private Label label18;
+        private Label label3;
+        private TextBox NewCardNumTb;
+        private ComboBox comboBox1;
     }
 }
