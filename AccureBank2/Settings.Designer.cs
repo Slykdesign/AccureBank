@@ -182,7 +182,7 @@
             // ThemeCb
             // 
             ThemeCb.FormattingEnabled = true;
-            ThemeCb.Items.AddRange(new object[] { "Red", "Blue", "Green", "Black", "Hot Pink", "Goldenrod" });
+            ThemeCb.Items.AddRange(new object[] { "Red", "Blue", "Green", "Crimson", "Hot Pink", "Goldenrod" });
             ThemeCb.Location = new Point(234, 229);
             ThemeCb.Name = "ThemeCb";
             ThemeCb.Size = new Size(382, 28);

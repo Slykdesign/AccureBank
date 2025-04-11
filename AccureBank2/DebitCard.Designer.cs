@@ -51,6 +51,7 @@
             label5 = new Label();
             label6 = new Label();
             AcNumTb = new TextBox();
+            resetBtn = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -184,6 +185,7 @@
             // panel2
             // 
             panel2.BorderStyle = BorderStyle.FixedSingle;
+            panel2.Controls.Add(resetBtn);
             panel2.Controls.Add(label4);
             panel2.Controls.Add(NewCardNumTb);
             panel2.Controls.Add(comboBox1);
@@ -251,7 +253,7 @@
             cancelBtn.BackColor = Color.Red;
             cancelBtn.Font = new Font("Segoe Script", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cancelBtn.ForeColor = Color.Transparent;
-            cancelBtn.Location = new Point(405, 270);
+            cancelBtn.Location = new Point(430, 270);
             cancelBtn.Name = "cancelBtn";
             cancelBtn.Size = new Size(115, 38);
             cancelBtn.TabIndex = 50;
@@ -264,7 +266,7 @@
             applyBtn.BackColor = Color.ForestGreen;
             applyBtn.Font = new Font("Segoe Script", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             applyBtn.ForeColor = Color.Transparent;
-            applyBtn.Location = new Point(157, 270);
+            applyBtn.Location = new Point(149, 270);
             applyBtn.Name = "applyBtn";
             applyBtn.Size = new Size(115, 38);
             applyBtn.TabIndex = 50;
@@ -306,6 +308,19 @@
             AcNumTb.Name = "AcNumTb";
             AcNumTb.Size = new Size(181, 27);
             AcNumTb.TabIndex = 36;
+            // 
+            // resetBtn
+            // 
+            resetBtn.BackColor = Color.RoyalBlue;
+            resetBtn.Font = new Font("Segoe Script", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            resetBtn.ForeColor = Color.Transparent;
+            resetBtn.Location = new Point(288, 270);
+            resetBtn.Name = "resetBtn";
+            resetBtn.Size = new Size(115, 38);
+            resetBtn.TabIndex = 60;
+            resetBtn.Text = "Reset";
+            resetBtn.UseVisualStyleBackColor = false;
+            resetBtn.Click += resetBtn_Click;
             // 
             // DebitCard
             // 
@@ -358,5 +373,6 @@
         private Label label3;
         private TextBox NewCardNumTb;
         private ComboBox comboBox1;
+        private Button resetBtn;
     }
 }

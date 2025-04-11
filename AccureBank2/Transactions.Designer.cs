@@ -71,6 +71,7 @@
             FromTb = new TextBox();
             pictureBox2 = new PictureBox();
             linkLabel1 = new LinkLabel();
+            linkLabel2 = new LinkLabel();
             TransactionView.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
@@ -536,19 +537,32 @@
             // 
             linkLabel1.AutoSize = true;
             linkLabel1.Font = new Font("Segoe Script", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            linkLabel1.Location = new Point(439, 518);
+            linkLabel1.Location = new Point(321, 497);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(380, 44);
+            linkLabel1.Size = new Size(299, 44);
             linkLabel1.TabIndex = 56;
             linkLabel1.TabStop = true;
-            linkLabel1.Text = "View Transaction Histoy";
+            linkLabel1.Text = "Transaction Histoy";
             linkLabel1.LinkClicked += linkLabel1_LinkClicked;
+            // 
+            // linkLabel2
+            // 
+            linkLabel2.AutoSize = true;
+            linkLabel2.Font = new Font("Segoe Script", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            linkLabel2.Location = new Point(676, 497);
+            linkLabel2.Name = "linkLabel2";
+            linkLabel2.Size = new Size(246, 44);
+            linkLabel2.TabIndex = 57;
+            linkLabel2.TabStop = true;
+            linkLabel2.Text = "Transfer Histoy";
+            linkLabel2.LinkClicked += linkLabel2_LinkClicked;
             // 
             // Transactions
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1174, 606);
+            ClientSize = new Size(1174, 580);
+            Controls.Add(linkLabel2);
             Controls.Add(linkLabel1);
             Controls.Add(pictureBox2);
             Controls.Add(panel5);
@@ -627,5 +641,6 @@
         private PictureBox pictureBox6;
         private PictureBox pictureBox7;
         private LinkLabel linkLabel1;
+        private LinkLabel linkLabel2;
     }
 }

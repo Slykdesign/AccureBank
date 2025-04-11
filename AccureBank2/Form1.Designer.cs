@@ -54,7 +54,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe Script", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(373, 91);
+            label1.Location = new Point(334, 91);
             label1.Name = "label1";
             label1.Size = new Size(424, 95);
             label1.TabIndex = 1;
@@ -62,15 +62,15 @@
             // 
             // Progress
             // 
-            Progress.Location = new Point(109, 225);
+            Progress.Location = new Point(101, 225);
             Progress.Name = "Progress";
-            Progress.Size = new Size(917, 16);
+            Progress.Size = new Size(886, 24);
             Progress.TabIndex = 4;
             // 
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources._360_F_496262226_zYj3Qdv1kjqylV05IY7lOmKNGJaYXbY4_removebg_preview__1_;
-            pictureBox2.Location = new Point(275, 91);
+            pictureBox2.Location = new Point(236, 91);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(92, 90);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -80,7 +80,7 @@
             // pictureBox3
             // 
             pictureBox3.Image = Properties.Resources._360_F_496262226_zYj3Qdv1kjqylV05IY7lOmKNGJaYXbY4_removebg_preview__1_;
-            pictureBox3.Location = new Point(803, 96);
+            pictureBox3.Location = new Point(753, 96);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(92, 90);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
@@ -96,7 +96,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Goldenrod;
-            ClientSize = new Size(1103, 427);
+            ClientSize = new Size(1086, 512);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             Controls.Add(Progress);

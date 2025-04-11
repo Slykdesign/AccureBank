@@ -32,14 +32,14 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             TransactionView = new Panel();
+            pictureBox8 = new PictureBox();
             pictureBox3 = new PictureBox();
-            pictureBox1 = new PictureBox();
             TransactionDGV = new Guna.UI2.WinForms.Guna2DataGridView();
             pictureBox2 = new PictureBox();
             label1 = new Label();
             TransactionView.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)TransactionDGV).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -47,33 +47,33 @@
             // TransactionView
             // 
             TransactionView.BackColor = Color.Goldenrod;
+            TransactionView.Controls.Add(pictureBox8);
             TransactionView.Controls.Add(pictureBox3);
-            TransactionView.Controls.Add(pictureBox1);
             TransactionView.Location = new Point(-15, -16);
             TransactionView.Name = "TransactionView";
             TransactionView.Size = new Size(123, 604);
             TransactionView.TabIndex = 2;
+            // 
+            // pictureBox8
+            // 
+            pictureBox8.Image = Properties.Resources.Screenshot_2025_03_27_171629_removebg_preview;
+            pictureBox8.Location = new Point(40, 28);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(69, 56);
+            pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox8.TabIndex = 67;
+            pictureBox8.TabStop = false;
             // 
             // pictureBox3
             // 
             pictureBox3.Image = Properties.Resources.back;
             pictureBox3.Location = new Point(40, 91);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(70, 54);
+            pictureBox3.Size = new Size(69, 54);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 66;
             pictureBox3.TabStop = false;
             pictureBox3.Click += pictureBox3_Click;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.bank;
-            pictureBox1.Location = new Point(40, 28);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(70, 45);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 60;
-            pictureBox1.TabStop = false;
             // 
             // TransactionDGV
             // 
@@ -163,8 +163,8 @@
             Name = "TransactionHistory";
             Text = "TransactionHistory";
             TransactionView.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)TransactionDGV).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
@@ -176,8 +176,8 @@
         private Panel TransactionView;
         private Guna.UI2.WinForms.Guna2DataGridView TransactionDGV;
         private PictureBox pictureBox2;
-        private PictureBox pictureBox1;
         private Label label1;
         private PictureBox pictureBox3;
+        private PictureBox pictureBox8;
     }
 }

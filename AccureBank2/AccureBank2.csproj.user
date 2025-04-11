@@ -28,5 +28,8 @@
     <Compile Update="Transactions.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="TransferHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

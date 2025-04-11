@@ -368,5 +368,12 @@ namespace AccureBank2
             transactionHistoryForm.Show();
             this.Hide();
         }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            TransferHistory transferHistoryForm = new TransferHistory();
+            transferHistoryForm.Show();
+            this.Hide();
+        }
     }
 }

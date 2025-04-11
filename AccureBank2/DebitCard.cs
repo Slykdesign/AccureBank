@@ -58,7 +58,7 @@ namespace AccureBank2
                 case "Assign":
                     AssignCard();
                     break;
-                case "Reassing":
+                case "Reassign":
                     ReassignCard();
                     break;
                 default:
@@ -199,6 +199,26 @@ namespace AccureBank2
                 {
                     NewCardNumTb.Visible = false;
                     CardNumTb.Visible = true;
+                }
+            }
+        }
+
+        private void resetBtn_Click(object sender, EventArgs e)
+        {
+            ClearTextBoxes(this);
+        }
+
+        private void ClearTextBoxes(Control parent)
+        {
+            foreach (Control control in parent.Controls)
+            {
+                if (control is TextBox textBox)
+                {
+                    textBox.Clear();
+                }
+                else if (control.HasChildren)
+                {
+                    ClearTextBoxes(control); // Recursively clear text boxes in child controls
                 }
             }
         }

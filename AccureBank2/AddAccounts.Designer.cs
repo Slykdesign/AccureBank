@@ -59,6 +59,8 @@
             label2 = new Label();
             AcNameTb = new TextBox();
             pictureBox2 = new PictureBox();
+            label12 = new Label();
+            pictureBox6 = new PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -66,12 +68,15 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)AccountDGV).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.Goldenrod;
+            panel1.Controls.Add(label12);
             panel1.Controls.Add(label4);
+            panel1.Controls.Add(pictureBox6);
             panel1.Controls.Add(pictureBox4);
             panel1.Controls.Add(label10);
             panel1.Controls.Add(pictureBox5);
@@ -392,6 +397,26 @@
             pictureBox2.TabStop = false;
             pictureBox2.Click += pictureBox2_Click;
             // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe Script", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label12.Location = new Point(25, 398);
+            label12.Name = "label12";
+            label12.Size = new Size(106, 23);
+            label12.TabIndex = 63;
+            label12.Text = "Debit Cards";
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.Image = Properties.Resources.card;
+            pictureBox6.Location = new Point(40, 424);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(70, 54);
+            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox6.TabIndex = 62;
+            pictureBox6.TabStop = false;
+            // 
             // AddAccounts
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -430,6 +455,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)AccountDGV).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -464,5 +490,7 @@
         private Label label11;
         private PictureBox pictureBox3;
         private PictureBox pictureBox1;
+        private Label label12;
+        private PictureBox pictureBox6;
     }
 }

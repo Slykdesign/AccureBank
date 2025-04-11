@@ -35,29 +35,54 @@ namespace AccureBank2
             {
                 MessageBox.Show("Select a theme!");
             }
-            else if (ThemeCb.SelectedIndex == 0)
-            {
-                panel1.BackColor = Color.Red;
-            }
-            else if (ThemeCb.SelectedIndex == 1)
-            {
-                panel1.BackColor = Color.Blue;
-            }
-            else if (ThemeCb.SelectedIndex == 2)
-            {
-                panel1.BackColor = Color.Green;
-            }
-            else if (ThemeCb.SelectedIndex == 3)
-            {
-                panel1.BackColor = Color.Black;
-            }
-            else if (ThemeCb.SelectedIndex == 4)
-            {
-                panel1.BackColor = Color.HotPink;
-            }
             else
             {
-                panel1.BackColor = Color.Goldenrod;
+                // Set the background color based on the selected theme
+                if (ThemeCb.SelectedIndex == 0)
+                {
+                    panel1.BackColor = Color.Red;
+                }
+                else if (ThemeCb.SelectedIndex == 1)
+                {
+                    panel1.BackColor = Color.Blue;
+                }
+                else if (ThemeCb.SelectedIndex == 2)
+                {
+                    panel1.BackColor = Color.Green;
+                }
+                else if (ThemeCb.SelectedIndex == 3)
+                {
+                    panel1.BackColor = Color.Crimson;
+                }
+                else if (ThemeCb.SelectedIndex == 4)
+                {
+                    panel1.BackColor = Color.HotPink;
+                }
+                else
+                {
+                    panel1.BackColor = Color.Goldenrod;
+                }
+                if (panel1.BackColor == Color.Blue || panel1.BackColor == Color.Red || panel1.BackColor == Color.Crimson)
+                {
+                    foreach (Control control in panel1.Controls)
+                    {
+                        if (control is Label || control is Button)
+                        {
+                            control.ForeColor = Color.White;
+                        }
+                    }
+                }
+                else
+                {
+                    // Reset text color to default (black) for other background colors
+                    foreach (Control control in panel1.Controls)
+                    {
+                        if (control is Label || control is Button)
+                        {
+                            control.ForeColor = Color.Black;
+                        }
+                    }
+                }
             }
         }
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\13309\OneDrive - Youngstown State University\Documents\Bank.Db.mdf"";Integrated Security=True;Connect Timeout=30");
