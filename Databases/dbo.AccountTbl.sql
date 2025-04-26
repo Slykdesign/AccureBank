@@ -8,6 +8,6 @@ CREATE TABLE [dbo].[AccountTbl] (
     [AcEducation]  VARCHAR (50)  NOT NULL,
     [AcIncome]     VARCHAR (50)  NOT NULL,
     [AcBalance]    INT           NOT NULL,
-    [AcDebCardNum] INT NULL, 
+    [AcDCardNum] INT NULL, 
     PRIMARY KEY CLUSTERED ([AcNum] ASC)
 );
