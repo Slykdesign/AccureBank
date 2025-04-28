@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             TransactionView = new Panel();
+            label16 = new Label();
+            pictureBox8 = new PictureBox();
             label8 = new Label();
             label9 = new Label();
             pictureBox5 = new PictureBox();
@@ -73,6 +75,7 @@
             linkLabel1 = new LinkLabel();
             linkLabel2 = new LinkLabel();
             TransactionView.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
@@ -88,7 +91,9 @@
             // 
             // TransactionView
             // 
-            TransactionView.BackColor = Color.Goldenrod;
+            TransactionView.BackColor = Color.Blue;
+            TransactionView.Controls.Add(label16);
+            TransactionView.Controls.Add(pictureBox8);
             TransactionView.Controls.Add(label8);
             TransactionView.Controls.Add(label9);
             TransactionView.Controls.Add(pictureBox5);
@@ -101,23 +106,47 @@
             TransactionView.Size = new Size(121, 635);
             TransactionView.TabIndex = 1;
             // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label16.ForeColor = Color.White;
+            label16.Location = new Point(17, 374);
+            label16.Name = "label16";
+            label16.Size = new Size(90, 19);
+            label16.TabIndex = 70;
+            label16.Text = "Debit Cards";
+            // 
+            // pictureBox8
+            // 
+            pictureBox8.Image = Properties.Resources.card;
+            pictureBox8.Location = new Point(26, 398);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(70, 54);
+            pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox8.TabIndex = 69;
+            pictureBox8.TabStop = false;
+            pictureBox8.Click += pictureBox8_Click;
+            // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Font = new Font("Segoe Script", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(26, 286);
+            label8.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.ForeColor = Color.White;
+            label8.Location = new Point(30, 288);
             label8.Name = "label8";
-            label8.Size = new Size(70, 23);
+            label8.Size = new Size(64, 19);
             label8.TabIndex = 68;
             label8.Text = "Settings";
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Font = new Font("Segoe Script", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.Location = new Point(16, 119);
+            label9.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.ForeColor = Color.White;
+            label9.Location = new Point(22, 119);
             label9.Name = "label9";
-            label9.Size = new Size(102, 23);
+            label9.Size = new Size(87, 19);
             label9.TabIndex = 67;
             label9.Text = "Main Menu";
             // 
@@ -135,10 +164,11 @@
             // label15
             // 
             label15.AutoSize = true;
-            label15.Font = new Font("Segoe Script", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label15.Location = new Point(22, 202);
+            label15.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label15.ForeColor = Color.White;
+            label15.Location = new Point(26, 205);
             label15.Name = "label15";
-            label15.Size = new Size(81, 23);
+            label15.Size = new Size(73, 19);
             label15.TabIndex = 66;
             label15.Text = "Accounts";
             // 
@@ -177,10 +207,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe Script", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(541, 12);
+            label1.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(549, 12);
             label1.Name = "label1";
-            label1.Size = new Size(226, 48);
+            label1.Size = new Size(186, 39);
             label1.TabIndex = 25;
             label1.Text = "Transactions";
             // 
@@ -199,9 +229,9 @@
             // 
             // ResetBtn
             // 
-            ResetBtn.BackColor = Color.FromArgb(128, 128, 255);
-            ResetBtn.Font = new Font("Segoe Script", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            ResetBtn.ForeColor = Color.Transparent;
+            ResetBtn.BackColor = Color.Blue;
+            ResetBtn.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ResetBtn.ForeColor = Color.White;
             ResetBtn.Location = new Point(720, 45);
             ResetBtn.Name = "ResetBtn";
             ResetBtn.Size = new Size(115, 38);
@@ -213,19 +243,19 @@
             // BalanceLbl
             // 
             BalanceLbl.AutoSize = true;
-            BalanceLbl.Font = new Font("Segoe Script", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            BalanceLbl.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             BalanceLbl.ForeColor = Color.FromArgb(192, 64, 0);
-            BalanceLbl.Location = new Point(708, 13);
+            BalanceLbl.Location = new Point(718, 13);
             BalanceLbl.Name = "BalanceLbl";
-            BalanceLbl.Size = new Size(139, 29);
+            BalanceLbl.Size = new Size(117, 22);
             BalanceLbl.TabIndex = 50;
             BalanceLbl.Text = "Your Balance";
             // 
             // CheckBalBtn
             // 
-            CheckBalBtn.BackColor = Color.FromArgb(128, 128, 255);
-            CheckBalBtn.Font = new Font("Segoe Script", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            CheckBalBtn.ForeColor = Color.Transparent;
+            CheckBalBtn.BackColor = Color.Blue;
+            CheckBalBtn.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            CheckBalBtn.ForeColor = Color.White;
             CheckBalBtn.Location = new Point(296, 35);
             CheckBalBtn.Name = "CheckBalBtn";
             CheckBalBtn.Size = new Size(115, 38);
@@ -237,16 +267,17 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe Script", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.FromArgb(192, 64, 0);
             label4.Location = new Point(15, 13);
             label4.Name = "label4";
-            label4.Size = new Size(206, 29);
+            label4.Size = new Size(176, 22);
             label4.TabIndex = 37;
             label4.Text = "Check Your Balance:";
             // 
             // CheckBalTb
             // 
+            CheckBalTb.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             CheckBalTb.Location = new Point(15, 40);
             CheckBalTb.Name = "CheckBalTb";
             CheckBalTb.Size = new Size(206, 27);
@@ -269,18 +300,18 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Font = new Font("Segoe Script", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label11.Location = new Point(99, 93);
+            label11.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label11.Location = new Point(114, 96);
             label11.Name = "label11";
-            label11.Size = new Size(97, 29);
+            label11.Size = new Size(77, 22);
             label11.TabIndex = 52;
             label11.Text = "Amount:";
             // 
             // WithdrawBtn
             // 
-            WithdrawBtn.BackColor = Color.FromArgb(128, 128, 255);
-            WithdrawBtn.Font = new Font("Segoe Script", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            WithdrawBtn.ForeColor = Color.Transparent;
+            WithdrawBtn.BackColor = Color.Blue;
+            WithdrawBtn.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            WithdrawBtn.ForeColor = Color.White;
             WithdrawBtn.Location = new Point(147, 137);
             WithdrawBtn.Name = "WithdrawBtn";
             WithdrawBtn.Size = new Size(115, 38);
@@ -291,6 +322,7 @@
             // 
             // WdAmountTb
             // 
+            WdAmountTb.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             WdAmountTb.Location = new Point(202, 95);
             WdAmountTb.Name = "WdAmountTb";
             WdAmountTb.Size = new Size(181, 27);
@@ -299,26 +331,27 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Font = new Font("Segoe Script", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label10.Location = new Point(15, 42);
+            label10.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label10.Location = new Point(42, 46);
             label10.Name = "label10";
-            label10.Size = new Size(181, 29);
+            label10.Size = new Size(149, 22);
             label10.TabIndex = 50;
             label10.Text = "Account Number:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe Script", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.FromArgb(192, 64, 0);
             label2.Location = new Point(15, 13);
             label2.Name = "label2";
-            label2.Size = new Size(108, 29);
+            label2.Size = new Size(88, 22);
             label2.TabIndex = 37;
             label2.Text = "Withdraw";
             // 
             // WdAccountTb
             // 
+            WdAccountTb.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             WdAccountTb.Location = new Point(202, 44);
             WdAccountTb.Name = "WdAccountTb";
             WdAccountTb.Size = new Size(181, 27);
@@ -341,28 +374,29 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Font = new Font("Segoe Script", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label12.Location = new Point(99, 93);
+            label12.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label12.Location = new Point(119, 95);
             label12.Name = "label12";
-            label12.Size = new Size(97, 29);
+            label12.Size = new Size(77, 22);
             label12.TabIndex = 52;
             label12.Text = "Amount:";
             // 
             // DepositBtn
             // 
-            DepositBtn.BackColor = Color.FromArgb(128, 128, 255);
-            DepositBtn.Font = new Font("Segoe Script", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            DepositBtn.ForeColor = Color.Transparent;
-            DepositBtn.Location = new Point(147, 137);
+            DepositBtn.BackColor = Color.Blue;
+            DepositBtn.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            DepositBtn.ForeColor = Color.White;
+            DepositBtn.Location = new Point(157, 137);
             DepositBtn.Name = "DepositBtn";
             DepositBtn.Size = new Size(115, 38);
             DepositBtn.TabIndex = 50;
-            DepositBtn.Text = "Depsoit";
+            DepositBtn.Text = "Deposit";
             DepositBtn.UseVisualStyleBackColor = false;
             DepositBtn.Click += DepositBtn_Click;
             // 
             // DepAmountTb
             // 
+            DepAmountTb.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             DepAmountTb.Location = new Point(202, 95);
             DepAmountTb.Name = "DepAmountTb";
             DepAmountTb.Size = new Size(181, 27);
@@ -371,26 +405,27 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Font = new Font("Segoe Script", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label13.Location = new Point(15, 42);
+            label13.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label13.Location = new Point(47, 46);
             label13.Name = "label13";
-            label13.Size = new Size(181, 29);
+            label13.Size = new Size(149, 22);
             label13.TabIndex = 50;
             label13.Text = "Account Number:";
             // 
             // label14
             // 
             label14.AutoSize = true;
-            label14.Font = new Font("Segoe Script", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label14.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label14.ForeColor = Color.FromArgb(192, 64, 0);
             label14.Location = new Point(15, 13);
             label14.Name = "label14";
-            label14.Size = new Size(84, 29);
+            label14.Size = new Size(72, 22);
             label14.TabIndex = 37;
             label14.Text = "Deposit";
             // 
             // DepAccountTb
             // 
+            DepAccountTb.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             DepAccountTb.Location = new Point(202, 44);
             DepAccountTb.Name = "DepAccountTb";
             DepAccountTb.Size = new Size(181, 27);
@@ -418,10 +453,10 @@
             // BalanceLabel
             // 
             BalanceLabel.AutoSize = true;
-            BalanceLabel.Font = new Font("Segoe Script", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            BalanceLabel.Location = new Point(319, 42);
+            BalanceLabel.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            BalanceLabel.Location = new Point(328, 45);
             BalanceLabel.Name = "BalanceLabel";
-            BalanceLabel.Size = new Size(92, 29);
+            BalanceLabel.Size = new Size(71, 22);
             BalanceLabel.TabIndex = 56;
             BalanceLabel.Text = "Amount";
             // 
@@ -450,25 +485,26 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Segoe Script", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.Location = new Point(464, 54);
+            label7.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Location = new Point(484, 58);
             label7.Name = "label7";
-            label7.Size = new Size(97, 29);
+            label7.Size = new Size(77, 22);
             label7.TabIndex = 54;
             label7.Text = "Amount:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe Script", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(43, 89);
+            label3.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(46, 89);
             label3.Name = "label3";
-            label3.Size = new Size(40, 29);
+            label3.Size = new Size(37, 22);
             label3.TabIndex = 52;
             label3.Text = "To:";
             // 
             // TransAmountTb
             // 
+            TransAmountTb.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TransAmountTb.Location = new Point(567, 56);
             TransAmountTb.Name = "TransAmountTb";
             TransAmountTb.Size = new Size(181, 27);
@@ -476,9 +512,9 @@
             // 
             // TransferBtn
             // 
-            TransferBtn.BackColor = Color.FromArgb(128, 128, 255);
-            TransferBtn.Font = new Font("Segoe Script", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            TransferBtn.ForeColor = Color.Transparent;
+            TransferBtn.BackColor = Color.Blue;
+            TransferBtn.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            TransferBtn.ForeColor = Color.White;
             TransferBtn.Location = new Point(765, 51);
             TransferBtn.Name = "TransferBtn";
             TransferBtn.Size = new Size(115, 38);
@@ -497,21 +533,21 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe Script", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(15, 42);
+            label5.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(25, 45);
             label5.Name = "label5";
-            label5.Size = new Size(68, 29);
+            label5.Size = new Size(58, 22);
             label5.TabIndex = 50;
             label5.Text = "From:";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Segoe Script", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.FromArgb(192, 64, 0);
             label6.Location = new Point(15, 13);
             label6.Name = "label6";
-            label6.Size = new Size(94, 29);
+            label6.Size = new Size(76, 22);
             label6.TabIndex = 37;
             label6.Text = "Transfer";
             // 
@@ -536,31 +572,32 @@
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
-            linkLabel1.Font = new Font("Segoe Script", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            linkLabel1.Location = new Point(321, 497);
+            linkLabel1.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            linkLabel1.Location = new Point(349, 508);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(299, 44);
+            linkLabel1.Size = new Size(233, 33);
             linkLabel1.TabIndex = 56;
             linkLabel1.TabStop = true;
-            linkLabel1.Text = "Transaction Histoy";
+            linkLabel1.Text = "Transaction History";
             linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
             // linkLabel2
             // 
             linkLabel2.AutoSize = true;
-            linkLabel2.Font = new Font("Segoe Script", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            linkLabel2.Location = new Point(676, 497);
+            linkLabel2.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            linkLabel2.Location = new Point(695, 508);
             linkLabel2.Name = "linkLabel2";
-            linkLabel2.Size = new Size(246, 44);
+            linkLabel2.Size = new Size(195, 33);
             linkLabel2.TabIndex = 57;
             linkLabel2.TabStop = true;
-            linkLabel2.Text = "Transfer Histoy";
+            linkLabel2.Text = "Transfer History";
             linkLabel2.LinkClicked += linkLabel2_LinkClicked;
             // 
             // Transactions
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.LightGray;
             ClientSize = new Size(1174, 580);
             Controls.Add(linkLabel2);
             Controls.Add(linkLabel1);
@@ -577,6 +614,7 @@
             Text = "Transactions";
             TransactionView.ResumeLayout(false);
             TransactionView.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
@@ -642,5 +680,7 @@
         private PictureBox pictureBox7;
         private LinkLabel linkLabel1;
         private LinkLabel linkLabel2;
+        private Label label16;
+        private PictureBox pictureBox8;
     }
 }

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             TransactionView = new Panel();
             pictureBox8 = new PictureBox();
             pictureBox3 = new PictureBox();
@@ -46,7 +46,7 @@
             // 
             // TransactionView
             // 
-            TransactionView.BackColor = Color.Goldenrod;
+            TransactionView.BackColor = Color.Blue;
             TransactionView.Controls.Add(pictureBox8);
             TransactionView.Controls.Add(pictureBox3);
             TransactionView.Location = new Point(-30, -20);
@@ -78,35 +78,35 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe Script", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(455, 4);
+            label1.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(493, 9);
             label1.Name = "label1";
-            label1.Size = new Size(281, 48);
+            label1.Size = new Size(239, 39);
             label1.TabIndex = 63;
             label1.Text = "Transfer History";
             // 
             // TranferDGV
             // 
-            dataGridViewCellStyle4.BackColor = Color.White;
-            TranferDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.DarkOrange;
-            dataGridViewCellStyle5.Font = new Font("Segoe Script", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle5.ForeColor = Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            TranferDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            TranferDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.DarkOrange;
+            dataGridViewCellStyle2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            TranferDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             TranferDGV.ColumnHeadersHeight = 25;
             TranferDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = Color.White;
-            dataGridViewCellStyle6.Font = new Font("Segoe Script", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle6.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            TranferDGV.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            TranferDGV.DefaultCellStyle = dataGridViewCellStyle3;
             TranferDGV.GridColor = Color.FromArgb(231, 229, 255);
             TranferDGV.Location = new Point(103, 97);
             TranferDGV.Name = "TranferDGV";
@@ -124,14 +124,14 @@
             TranferDGV.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
             TranferDGV.ThemeStyle.HeaderStyle.BackColor = Color.DarkOrange;
             TranferDGV.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            TranferDGV.ThemeStyle.HeaderStyle.Font = new Font("Segoe Script", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            TranferDGV.ThemeStyle.HeaderStyle.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TranferDGV.ThemeStyle.HeaderStyle.ForeColor = Color.White;
             TranferDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             TranferDGV.ThemeStyle.HeaderStyle.Height = 25;
             TranferDGV.ThemeStyle.ReadOnly = false;
             TranferDGV.ThemeStyle.RowsStyle.BackColor = Color.White;
             TranferDGV.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            TranferDGV.ThemeStyle.RowsStyle.Font = new Font("Segoe Script", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            TranferDGV.ThemeStyle.RowsStyle.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TranferDGV.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
             TranferDGV.ThemeStyle.RowsStyle.Height = 24;
             TranferDGV.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
@@ -158,6 +158,7 @@
             Controls.Add(label1);
             Controls.Add(TranferDGV);
             Controls.Add(TransactionView);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "TransferHistory";
             Text = "TransferHistory";
             TransactionView.ResumeLayout(false);

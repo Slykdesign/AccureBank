@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static AccureBank2.Login;
 
 namespace AccureBank2
 {
@@ -110,8 +111,8 @@ namespace AccureBank2
                 AcPhoneTb.Text = AccountDGV.SelectedRows[0].Cells[2].Value.ToString();
                 AcAddressTb.Text = AccountDGV.SelectedRows[0].Cells[3].Value.ToString();
                 GenderCb.SelectedItem = AccountDGV.SelectedRows[0].Cells[4].Value.ToString();
-                OccupationTb.Text = AccountDGV.SelectedRows[0].Cells[6].Value.ToString();
-                EducationCb.SelectedItem = AccountDGV.SelectedRows[0].Cells[5].Value.ToString();
+                OccupationTb.Text = AccountDGV.SelectedRows[0].Cells[5].Value.ToString();
+                EducationCb.SelectedItem = AccountDGV.SelectedRows[0].Cells[6].Value.ToString();
                 IncomeTb.Text = AccountDGV.SelectedRows[0].Cells[7].Value.ToString();
                 Key = string.IsNullOrEmpty(AcNameTb.Text) ? 0 : Convert.ToInt32(selectedRow.Cells[0].Value.ToString());
                 if (AcNameTb.Text == "")
@@ -165,21 +166,36 @@ namespace AccureBank2
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            MainMenu Obj = new MainMenu();
-            Obj.Show();
+            if (UserSession.Role == "Admin")
+            {
+                MainMenu adminMenu = new MainMenu();
+                adminMenu.Show();
+            }
+            else if (UserSession.Role == "Agent")
+            {
+                MainMenu2 agentMenu = new MainMenu2();
+                agentMenu.Show();
+            }
             this.Hide();
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            Settings Obj = new Settings();
+            Transactions Obj = new Transactions();
             Obj.Show();
             this.Hide();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            Transactions Obj = new Transactions();
+            Settings Obj = new Settings();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            DebitCard Obj = new DebitCard();
             Obj.Show();
             this.Hide();
         }

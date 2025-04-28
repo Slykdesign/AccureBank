@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static AccureBank2.Login;
 
 namespace AccureBank2
 {
@@ -337,8 +338,16 @@ namespace AccureBank2
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-            MainMenu Obj = new MainMenu();
-            Obj.Show();
+            if (UserSession.Role == "Admin")
+            {
+                MainMenu adminMenu = new MainMenu();
+                adminMenu.Show();
+            }
+            else if (UserSession.Role == "Agent")
+            {
+                MainMenu2 agentMenu = new MainMenu2();
+                agentMenu.Show();
+            }
             this.Hide();
         }
 
@@ -373,6 +382,13 @@ namespace AccureBank2
         {
             TransferHistory transferHistoryForm = new TransferHistory();
             transferHistoryForm.Show();
+            this.Hide();
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            DebitCard Obj = new DebitCard();
+            Obj.Show();
             this.Hide();
         }
     }

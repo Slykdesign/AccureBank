@@ -57,15 +57,16 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe Script", 25.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(256, 19);
+            label1.Font = new Font("Times New Roman", 25.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(290, 12);
             label1.Name = "label1";
-            label1.Size = new Size(311, 70);
+            label1.Size = new Size(237, 51);
             label1.TabIndex = 2;
             label1.Text = "AccureBank";
             // 
             // UsernameTb
             // 
+            UsernameTb.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             UsernameTb.Location = new Point(244, 188);
             UsernameTb.Name = "UsernameTb";
             UsernameTb.Size = new Size(346, 27);
@@ -74,25 +75,26 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe Script", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(122, 188);
+            label2.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(122, 187);
             label2.Name = "label2";
-            label2.Size = new Size(109, 29);
+            label2.Size = new Size(110, 26);
             label2.TabIndex = 4;
             label2.Text = "Username:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe Script", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(122, 230);
+            label3.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(124, 230);
             label3.Name = "label3";
-            label3.Size = new Size(109, 29);
+            label3.Size = new Size(108, 26);
             label3.TabIndex = 6;
             label3.Text = "Password:";
             // 
             // PasswordTb
             // 
+            PasswordTb.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             PasswordTb.Location = new Point(244, 230);
             PasswordTb.Name = "PasswordTb";
             PasswordTb.PasswordChar = '*';
@@ -101,7 +103,7 @@
             // 
             // LoginBtn
             // 
-            LoginBtn.Font = new Font("Segoe Script", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            LoginBtn.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             LoginBtn.Location = new Point(321, 276);
             LoginBtn.Name = "LoginBtn";
             LoginBtn.Size = new Size(189, 51);
@@ -112,22 +114,23 @@
             // 
             // RoleCb
             // 
+            RoleCb.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             RoleCb.FormattingEnabled = true;
             RoleCb.Items.AddRange(new object[] { "Admin", "Agent" });
             RoleCb.Location = new Point(244, 144);
             RoleCb.Name = "RoleCb";
-            RoleCb.Size = new Size(346, 28);
+            RoleCb.Size = new Size(346, 27);
             RoleCb.TabIndex = 36;
             RoleCb.Text = "Role";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe Script", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.ForeColor = SystemColors.MenuHighlight;
-            label5.Location = new Point(376, 341);
+            label5.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.ForeColor = SystemColors.HotTrack;
+            label5.Location = new Point(384, 341);
             label5.Name = "label5";
-            label5.Size = new Size(62, 29);
+            label5.Size = new Size(62, 26);
             label5.TabIndex = 38;
             label5.Text = "Reset";
             label5.Click += label5_Click;
@@ -145,7 +148,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Goldenrod;
+            panel1.BackColor = Color.Blue;
             panel1.Controls.Add(pictureBox4);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
@@ -157,6 +160,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.LightGray;
             ClientSize = new Size(696, 410);
             Controls.Add(pictureBox3);
             Controls.Add(label5);

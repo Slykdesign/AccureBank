@@ -43,6 +43,7 @@
             pictureBox6 = new PictureBox();
             pictureBox7 = new PictureBox();
             pictureBox8 = new PictureBox();
+            label7 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -56,10 +57,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe Script", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(238, 68);
+            label1.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(250, 82);
             label1.Name = "label1";
-            label1.Size = new Size(213, 48);
+            label1.Size = new Size(184, 39);
             label1.TabIndex = 2;
             label1.Text = "AccureBank";
             // 
@@ -67,13 +69,13 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Red;
-            label2.Font = new Font("Segoe Script", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Transparent;
-            label2.Location = new Point(128, 207);
+            label2.Location = new Point(127, 201);
             label2.Name = "label2";
-            label2.Size = new Size(245, 192);
+            label2.Size = new Size(265, 198);
             label2.TabIndex = 7;
-            label2.Text = "Watching over your\r\nmoney is a lifelong\r\nprocess. Luckily, we're\r\nhere to help. Keep\r\nyour money safe in\r\nthe bank of accuracy";
+            label2.Text = "Watching over your\r\nmoney is a lifelong\r\nprocess. Luckily, we're\r\nhere to help. Keep\r\nyour money safe in\r\nthe bank of accuracy.";
             // 
             // pictureBox2
             // 
@@ -88,7 +90,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.accoint;
-            pictureBox1.Location = new Point(630, 83);
+            pictureBox1.Location = new Point(635, 83);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(70, 54);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -99,7 +101,7 @@
             // pictureBox3
             // 
             pictureBox3.Image = Properties.Resources.settings;
-            pictureBox3.Location = new Point(630, 254);
+            pictureBox3.Location = new Point(635, 254);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(70, 54);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
@@ -110,7 +112,7 @@
             // pictureBox4
             // 
             pictureBox4.Image = Properties.Resources.transactions;
-            pictureBox4.Location = new Point(630, 166);
+            pictureBox4.Location = new Point(635, 166);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(70, 54);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
@@ -121,30 +123,33 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe Script", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(626, 56);
+            label3.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(635, 60);
             label3.Name = "label3";
-            label3.Size = new Size(81, 23);
+            label3.Size = new Size(73, 19);
             label3.TabIndex = 15;
             label3.Text = "Accounts";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe Script", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(609, 140);
+            label4.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(622, 140);
             label4.Name = "label4";
-            label4.Size = new Size(112, 23);
+            label4.Size = new Size(94, 19);
             label4.TabIndex = 16;
             label4.Text = "Transactions";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe Script", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(630, 228);
+            label5.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(639, 228);
             label5.Name = "label5";
-            label5.Size = new Size(70, 23);
+            label5.Size = new Size(64, 19);
             label5.TabIndex = 17;
             label5.Text = "Settings";
             // 
@@ -162,17 +167,18 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Segoe Script", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(615, 319);
+            label6.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(628, 319);
             label6.Name = "label6";
-            label6.Size = new Size(106, 23);
+            label6.Size = new Size(90, 19);
             label6.TabIndex = 61;
             label6.Text = "Debit Cards";
             // 
             // pictureBox6
             // 
             pictureBox6.Image = Properties.Resources.card;
-            pictureBox6.Location = new Point(630, 345);
+            pictureBox6.Location = new Point(635, 345);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(70, 54);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
@@ -194,19 +200,31 @@
             // pictureBox8
             // 
             pictureBox8.Image = Properties.Resources.Screenshot_2025_03_27_171629_removebg_preview;
-            pictureBox8.Location = new Point(304, 23);
+            pictureBox8.Location = new Point(300, 23);
             pictureBox8.Name = "pictureBox8";
             pictureBox8.Size = new Size(69, 56);
             pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox8.TabIndex = 63;
             pictureBox8.TabStop = false;
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(62, 23);
+            label7.Name = "label7";
+            label7.Size = new Size(56, 19);
+            label7.TabIndex = 64;
+            label7.Text = "Agents";
+            // 
             // MainMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Goldenrod;
+            BackColor = Color.Blue;
             ClientSize = new Size(729, 452);
+            Controls.Add(label7);
             Controls.Add(pictureBox8);
             Controls.Add(pictureBox7);
             Controls.Add(label6);
@@ -252,5 +270,6 @@
         private PictureBox pictureBox6;
         private PictureBox pictureBox7;
         private PictureBox pictureBox8;
+        private Label label7;
     }
 }

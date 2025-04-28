@@ -50,21 +50,18 @@
             APasswordTb = new TextBox();
             AgentDGV = new Guna.UI2.WinForms.Guna2DataGridView();
             pictureBox2 = new PictureBox();
-            pictureBox3 = new PictureBox();
-            SettingsLbl = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)AgentDGV).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // CancelBtn
             // 
             CancelBtn.BackColor = Color.Red;
-            CancelBtn.Font = new Font("Segoe Script", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            CancelBtn.ForeColor = Color.Transparent;
+            CancelBtn.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            CancelBtn.ForeColor = Color.White;
             CancelBtn.Location = new Point(786, 242);
             CancelBtn.Name = "CancelBtn";
             CancelBtn.Size = new Size(115, 38);
@@ -75,9 +72,9 @@
             // 
             // EditBtn
             // 
-            EditBtn.BackColor = Color.FromArgb(128, 128, 255);
-            EditBtn.Font = new Font("Segoe Script", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            EditBtn.ForeColor = Color.Transparent;
+            EditBtn.BackColor = Color.RoyalBlue;
+            EditBtn.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            EditBtn.ForeColor = Color.White;
             EditBtn.Location = new Point(422, 242);
             EditBtn.Name = "EditBtn";
             EditBtn.Size = new Size(115, 38);
@@ -89,7 +86,7 @@
             // SubmitBtn
             // 
             SubmitBtn.BackColor = Color.ForestGreen;
-            SubmitBtn.Font = new Font("Segoe Script", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            SubmitBtn.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             SubmitBtn.ForeColor = Color.White;
             SubmitBtn.Location = new Point(607, 242);
             SubmitBtn.Name = "SubmitBtn";
@@ -102,15 +99,16 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Segoe Script", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(254, 209);
+            label6.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Location = new Point(232, 209);
             label6.Name = "label6";
-            label6.Size = new Size(91, 29);
+            label6.Size = new Size(94, 26);
             label6.TabIndex = 48;
             label6.Text = "Address:";
             // 
             // AAddressTb
             // 
+            AAddressTb.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             AAddressTb.Location = new Point(351, 209);
             AAddressTb.Name = "AAddressTb";
             AAddressTb.Size = new Size(681, 27);
@@ -119,15 +117,16 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe Script", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.Location = new Point(755, 155);
             label5.Name = "label5";
-            label5.Size = new Size(109, 29);
+            label5.Size = new Size(108, 26);
             label5.TabIndex = 46;
             label5.Text = "Password:";
             // 
             // APhoneTb
             // 
+            APhoneTb.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             APhoneTb.Location = new Point(597, 157);
             APhoneTb.Name = "APhoneTb";
             APhoneTb.Size = new Size(141, 27);
@@ -136,25 +135,26 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe Script", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.Location = new Point(511, 155);
             label3.Name = "label3";
-            label3.Size = new Size(80, 29);
+            label3.Size = new Size(77, 26);
             label3.TabIndex = 44;
             label3.Text = "Phone:";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe Script", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.Location = new Point(254, 155);
             label4.Name = "label4";
-            label4.Size = new Size(71, 29);
+            label4.Size = new Size(72, 26);
             label4.TabIndex = 43;
             label4.Text = "Name:";
             // 
             // ANameTb
             // 
+            ANameTb.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ANameTb.Location = new Point(351, 157);
             ANameTb.Name = "ANameTb";
             ANameTb.Size = new Size(142, 27);
@@ -163,16 +163,16 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe Script", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Times New Roman", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(561, 12);
             label1.Name = "label1";
-            label1.Size = new Size(258, 48);
+            label1.Size = new Size(198, 34);
             label1.TabIndex = 41;
             label1.Text = "Manage Agents";
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Goldenrod;
+            panel1.BackColor = Color.Blue;
             panel1.Controls.Add(label10);
             panel1.Controls.Add(pictureBox4);
             panel1.Controls.Add(pictureBox1);
@@ -184,10 +184,11 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Font = new Font("Segoe Script", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label10.Location = new Point(21, 128);
+            label10.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label10.ForeColor = Color.White;
+            label10.Location = new Point(32, 128);
             label10.Name = "label10";
-            label10.Size = new Size(102, 23);
+            label10.Size = new Size(87, 19);
             label10.TabIndex = 66;
             label10.Text = "Main Menu";
             // 
@@ -204,7 +205,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.bank;
-            pictureBox1.Location = new Point(31, 154);
+            pictureBox1.Location = new Point(36, 154);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(70, 54);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -214,6 +215,7 @@
             // 
             // APasswordTb
             // 
+            APasswordTb.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             APasswordTb.Location = new Point(870, 155);
             APasswordTb.Name = "APasswordTb";
             APasswordTb.Size = new Size(162, 27);
@@ -225,7 +227,7 @@
             AgentDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.DarkOrange;
-            dataGridViewCellStyle2.Font = new Font("Segoe Script", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle2.ForeColor = Color.White;
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
@@ -235,7 +237,7 @@
             AgentDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe Script", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
@@ -258,14 +260,14 @@
             AgentDGV.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
             AgentDGV.ThemeStyle.HeaderStyle.BackColor = Color.DarkOrange;
             AgentDGV.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            AgentDGV.ThemeStyle.HeaderStyle.Font = new Font("Segoe Script", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            AgentDGV.ThemeStyle.HeaderStyle.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             AgentDGV.ThemeStyle.HeaderStyle.ForeColor = Color.White;
             AgentDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             AgentDGV.ThemeStyle.HeaderStyle.Height = 25;
             AgentDGV.ThemeStyle.ReadOnly = false;
             AgentDGV.ThemeStyle.RowsStyle.BackColor = Color.White;
             AgentDGV.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            AgentDGV.ThemeStyle.RowsStyle.Font = new Font("Segoe Script", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            AgentDGV.ThemeStyle.RowsStyle.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             AgentDGV.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
             AgentDGV.ThemeStyle.RowsStyle.Height = 24;
             AgentDGV.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
@@ -283,34 +285,12 @@
             pictureBox2.TabStop = false;
             pictureBox2.Click += pictureBox2_Click;
             // 
-            // pictureBox3
-            // 
-            pictureBox3.Image = Properties.Resources.settings;
-            pictureBox3.Location = new Point(115, 6);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(68, 54);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 63;
-            pictureBox3.TabStop = false;
-            // 
-            // SettingsLbl
-            // 
-            SettingsLbl.AutoSize = true;
-            SettingsLbl.Font = new Font("Segoe Script", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            SettingsLbl.Location = new Point(189, 37);
-            SettingsLbl.Name = "SettingsLbl";
-            SettingsLbl.Size = new Size(70, 23);
-            SettingsLbl.TabIndex = 64;
-            SettingsLbl.Text = "Settings";
-            SettingsLbl.Click += SettingsLbl_Click;
-            // 
             // Agents
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.LightGray;
             ClientSize = new Size(1243, 596);
-            Controls.Add(SettingsLbl);
-            Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             Controls.Add(AgentDGV);
             Controls.Add(APasswordTb);
@@ -335,7 +315,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)AgentDGV).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -360,8 +339,6 @@
         private TextBox APasswordTb;
         private Guna.UI2.WinForms.Guna2DataGridView AgentDGV;
         private PictureBox pictureBox2;
-        private PictureBox pictureBox3;
-        private Label SettingsLbl;
         private Label label10;
         private PictureBox pictureBox1;
     }

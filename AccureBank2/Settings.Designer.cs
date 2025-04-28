@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            label12 = new Label();
             label15 = new Label();
+            pictureBox6 = new PictureBox();
             label10 = new Label();
             pictureBox5 = new PictureBox();
             label11 = new Label();
@@ -46,6 +48,7 @@
             button2 = new Button();
             label5 = new Label();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -55,8 +58,10 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Goldenrod;
+            panel1.BackColor = Color.Blue;
+            panel1.Controls.Add(label12);
             panel1.Controls.Add(label15);
+            panel1.Controls.Add(pictureBox6);
             panel1.Controls.Add(label10);
             panel1.Controls.Add(pictureBox5);
             panel1.Controls.Add(label11);
@@ -68,23 +73,47 @@
             panel1.Size = new Size(125, 649);
             panel1.TabIndex = 1;
             // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label12.ForeColor = Color.White;
+            label12.Location = new Point(18, 413);
+            label12.Name = "label12";
+            label12.Size = new Size(90, 19);
+            label12.TabIndex = 65;
+            label12.Text = "Debit Cards";
+            // 
             // label15
             // 
             label15.AutoSize = true;
-            label15.Font = new Font("Segoe Script", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label15.Location = new Point(23, 235);
+            label15.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label15.ForeColor = Color.White;
+            label15.Location = new Point(27, 237);
             label15.Name = "label15";
-            label15.Size = new Size(81, 23);
+            label15.Size = new Size(73, 19);
             label15.TabIndex = 68;
             label15.Text = "Accounts";
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.Image = Properties.Resources.card;
+            pictureBox6.Location = new Point(27, 437);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(70, 54);
+            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox6.TabIndex = 64;
+            pictureBox6.TabStop = false;
+            pictureBox6.Click += pictureBox6_Click;
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Font = new Font("Segoe Script", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label10.Location = new Point(14, 152);
+            label10.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label10.ForeColor = Color.White;
+            label10.Location = new Point(18, 152);
             label10.Name = "label10";
-            label10.Size = new Size(102, 23);
+            label10.Size = new Size(87, 19);
             label10.TabIndex = 67;
             label10.Text = "Main Menu";
             // 
@@ -102,17 +131,18 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Font = new Font("Segoe Script", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label11.Location = new Point(7, 319);
+            label11.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label11.ForeColor = Color.White;
+            label11.Location = new Point(15, 322);
             label11.Name = "label11";
-            label11.Size = new Size(112, 23);
+            label11.Size = new Size(94, 19);
             label11.TabIndex = 66;
             label11.Text = "Transactions";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.transactions;
-            pictureBox1.Location = new Point(27, 345);
+            pictureBox1.Location = new Point(27, 348);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(70, 54);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -144,20 +174,20 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe Script", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(408, 12);
+            label1.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(413, 12);
             label1.Name = "label1";
-            label1.Size = new Size(142, 48);
+            label1.Size = new Size(124, 39);
             label1.TabIndex = 24;
             label1.Text = "Settings";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe Script", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(234, 88);
+            label4.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(234, 97);
             label4.Name = "label4";
-            label4.Size = new Size(230, 29);
+            label4.Size = new Size(175, 20);
             label4.TabIndex = 26;
             label4.Text = "Admin New Password:";
             // 
@@ -172,17 +202,17 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe Script", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(234, 197);
+            label2.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(234, 206);
             label2.Name = "label2";
-            label2.Size = new Size(79, 29);
+            label2.Size = new Size(64, 20);
             label2.TabIndex = 29;
             label2.Text = "Theme:";
             // 
             // ThemeCb
             // 
             ThemeCb.FormattingEnabled = true;
-            ThemeCb.Items.AddRange(new object[] { "Red", "Blue", "Green", "Crimson", "Hot Pink", "Goldenrod" });
+            ThemeCb.Items.AddRange(new object[] { "Red", "DarkGreen", "Crimson", "Hot Pink", "Orange", "Blue" });
             ThemeCb.Location = new Point(234, 229);
             ThemeCb.Name = "ThemeCb";
             ThemeCb.Size = new Size(382, 28);
@@ -191,7 +221,7 @@
             // button1
             // 
             button1.BackColor = Color.ForestGreen;
-            button1.Font = new Font("Segoe Script", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.White;
             button1.Location = new Point(659, 120);
             button1.Name = "button1";
@@ -215,7 +245,7 @@
             // button2
             // 
             button2.BackColor = Color.ForestGreen;
-            button2.Font = new Font("Segoe Script", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button2.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.White;
             button2.Location = new Point(659, 229);
             button2.Name = "button2";
@@ -228,11 +258,11 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe Script", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.ForeColor = SystemColors.MenuHighlight;
-            label5.Location = new Point(457, 315);
+            label5.Font = new Font("Times New Roman", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.ForeColor = SystemColors.HotTrack;
+            label5.Location = new Point(469, 289);
             label5.Name = "label5";
-            label5.Size = new Size(62, 29);
+            label5.Size = new Size(49, 20);
             label5.TabIndex = 40;
             label5.Text = "Reset";
             label5.Click += label5_Click;
@@ -241,6 +271,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.LightGray;
             ClientSize = new Size(925, 500);
             Controls.Add(label5);
             Controls.Add(button2);
@@ -257,6 +288,7 @@
             Text = "Settings";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
@@ -285,5 +317,7 @@
         private PictureBox pictureBox1;
         private PictureBox pictureBox4;
         private Label label15;
+        private Label label12;
+        private PictureBox pictureBox6;
     }
 }

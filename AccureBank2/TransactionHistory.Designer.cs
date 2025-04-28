@@ -46,18 +46,18 @@
             // 
             // TransactionView
             // 
-            TransactionView.BackColor = Color.Goldenrod;
+            TransactionView.BackColor = Color.Blue;
             TransactionView.Controls.Add(pictureBox8);
             TransactionView.Controls.Add(pictureBox3);
             TransactionView.Location = new Point(-15, -16);
             TransactionView.Name = "TransactionView";
-            TransactionView.Size = new Size(123, 604);
+            TransactionView.Size = new Size(110, 604);
             TransactionView.TabIndex = 2;
             // 
             // pictureBox8
             // 
             pictureBox8.Image = Properties.Resources.Screenshot_2025_03_27_171629_removebg_preview;
-            pictureBox8.Location = new Point(40, 28);
+            pictureBox8.Location = new Point(27, 31);
             pictureBox8.Name = "pictureBox8";
             pictureBox8.Size = new Size(69, 56);
             pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
@@ -67,7 +67,7 @@
             // pictureBox3
             // 
             pictureBox3.Image = Properties.Resources.back;
-            pictureBox3.Location = new Point(40, 91);
+            pictureBox3.Location = new Point(27, 94);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(69, 54);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
@@ -81,7 +81,7 @@
             TransactionDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.DarkOrange;
-            dataGridViewCellStyle2.Font = new Font("Segoe Script", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle2.ForeColor = Color.White;
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
@@ -91,19 +91,19 @@
             TransactionDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe Script", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             TransactionDGV.DefaultCellStyle = dataGridViewCellStyle3;
             TransactionDGV.GridColor = Color.FromArgb(231, 229, 255);
-            TransactionDGV.Location = new Point(114, 105);
+            TransactionDGV.Location = new Point(101, 97);
             TransactionDGV.Name = "TransactionDGV";
             TransactionDGV.RowHeadersVisible = false;
             TransactionDGV.RowHeadersWidth = 51;
             TransactionDGV.RowTemplate.Height = 24;
-            TransactionDGV.Size = new Size(1038, 431);
+            TransactionDGV.Size = new Size(1039, 454);
             TransactionDGV.TabIndex = 41;
             TransactionDGV.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             TransactionDGV.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -114,14 +114,14 @@
             TransactionDGV.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
             TransactionDGV.ThemeStyle.HeaderStyle.BackColor = Color.DarkOrange;
             TransactionDGV.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            TransactionDGV.ThemeStyle.HeaderStyle.Font = new Font("Segoe Script", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            TransactionDGV.ThemeStyle.HeaderStyle.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TransactionDGV.ThemeStyle.HeaderStyle.ForeColor = Color.White;
             TransactionDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             TransactionDGV.ThemeStyle.HeaderStyle.Height = 25;
             TransactionDGV.ThemeStyle.ReadOnly = false;
             TransactionDGV.ThemeStyle.RowsStyle.BackColor = Color.White;
             TransactionDGV.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            TransactionDGV.ThemeStyle.RowsStyle.Font = new Font("Segoe Script", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            TransactionDGV.ThemeStyle.RowsStyle.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TransactionDGV.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
             TransactionDGV.ThemeStyle.RowsStyle.Height = 24;
             TransactionDGV.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
@@ -131,7 +131,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.close1;
-            pictureBox2.Location = new Point(1118, 12);
+            pictureBox2.Location = new Point(1107, 12);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(33, 37);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -142,10 +142,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe Script", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(466, 12);
+            label1.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(485, 15);
             label1.Name = "label1";
-            label1.Size = new Size(340, 48);
+            label1.Size = new Size(283, 39);
             label1.TabIndex = 61;
             label1.Text = "Transaction History";
             // 
@@ -154,7 +154,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
-            ClientSize = new Size(1163, 563);
+            ClientSize = new Size(1158, 563);
             Controls.Add(label1);
             Controls.Add(pictureBox2);
             Controls.Add(TransactionDGV);

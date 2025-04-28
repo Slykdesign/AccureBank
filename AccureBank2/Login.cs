@@ -12,12 +12,18 @@ using System.Windows.Forms;
 
 namespace AccureBank2
 {
+    public static class UserSession
+    {
+        public static string Role { get; set; } // "Admin" or "Agent"
+    }
+
     public partial class Login : Form
     {
         public Login()
         {
             InitializeComponent();
         }
+
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\13309\OneDrive - Youngstown State University\Documents\Bank.Db.mdf"";Integrated Security=True;Connect Timeout=30");
 
         private void label5_Click(object sender, EventArgs e)
@@ -34,62 +40,50 @@ namespace AccureBank2
             {
                 MessageBox.Show("Select a Role");
             }
-            else if (RoleCb.SelectedIndex == 0)
+            else if (RoleCb.SelectedIndex == 0) // Admin
             {
-                if (UsernameTb.Text == "" || PasswordTb.Text == "")
+                if (IsValidAdmin(UsernameTb.Text, PasswordTb.Text))
                 {
-                    MessageBox.Show("Enter both admin name and password!");
+                    UserSession.Role = "Admin"; // Store role
+                    MainMenu adminMenu = new MainMenu();
+                    adminMenu.Show();
+                    this.Hide();
                 }
                 else
                 {
-                    Con.Open();
-                    SqlDataAdapter sda = new SqlDataAdapter("select count(*) from AdminTbl where AdName = '" + UsernameTb.Text + "' and AdPassword = '" + PasswordTb.Text + "'", Con);
-                    DataTable dt = new DataTable();
-                    sda.Fill(dt);
-                    if (dt.Rows[0][0].ToString() == "1")
-                    {
-                        MainMenu Obj = new MainMenu();
-                        Obj.Show();
-                        this.Hide();
-                        Con.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Wrong admin name or password!");
-                        UsernameTb.Text = "";
-                        PasswordTb.Text = "";
-                    }
-                    Con.Close();
+                    MessageBox.Show("Invalid admin credentials!");
                 }
             }
-            else
+            else if (RoleCb.SelectedIndex == 1) // Agent
             {
-                if (UsernameTb.Text == "" || PasswordTb.Text == "")
+                if (IsValidAgent(UsernameTb.Text, PasswordTb.Text))
                 {
-                    MessageBox.Show("Enter both user name and password!");
+                    UserSession.Role = "Agent"; // Store role
+                    MainMenu2 agentMenu = new MainMenu2();
+                    agentMenu.Show();
+                    this.Hide();
                 }
                 else
                 {
-                    Con.Open();
-                    SqlDataAdapter sda = new SqlDataAdapter("select count(*) from AgentTbl where AName = '" + UsernameTb.Text + "' and APassword = '" + PasswordTb.Text + "'", Con);
-                    DataTable dt = new DataTable();
-                    sda.Fill(dt);
-                    if (dt.Rows[0][0].ToString() == "1")
-                    {
-                        MainMenu Obj = new MainMenu();
-                        Obj.Show();
-                        this.Hide();
-                        Con.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Wrong user name or password!");
-                        UsernameTb.Text = "";
-                        PasswordTb.Text = "";
-                    }
-                    Con.Close();
+                    MessageBox.Show("Invalid agent credentials!");
                 }
             }
+        }
+
+        private bool IsValidAdmin(string username, string password)
+        {
+            SqlDataAdapter sda = new SqlDataAdapter($"SELECT COUNT(*) FROM AdminTbl WHERE AdName = '{username}' AND AdPassword = '{password}'", Con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return dt.Rows[0][0].ToString() == "1";
+        }
+
+        private bool IsValidAgent(string username, string password)
+        {
+            SqlDataAdapter sda = new SqlDataAdapter($"SELECT COUNT(*) FROM AgentTbl WHERE AName = '{username}' AND APassword = '{password}'", Con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return dt.Rows[0][0].ToString() == "1";
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)

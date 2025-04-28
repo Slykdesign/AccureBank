@@ -53,10 +53,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe Script", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(334, 91);
+            label1.Font = new Font("Times New Roman", 40.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(364, 105);
             label1.Name = "label1";
-            label1.Size = new Size(424, 95);
+            label1.Size = new Size(367, 76);
             label1.TabIndex = 1;
             label1.Text = "AccureBank";
             // 
@@ -80,7 +81,7 @@
             // pictureBox3
             // 
             pictureBox3.Image = Properties.Resources._360_F_496262226_zYj3Qdv1kjqylV05IY7lOmKNGJaYXbY4_removebg_preview__1_;
-            pictureBox3.Location = new Point(753, 96);
+            pictureBox3.Location = new Point(751, 91);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(92, 90);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
@@ -95,7 +96,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Goldenrod;
+            BackColor = Color.Blue;
             ClientSize = new Size(1086, 512);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);

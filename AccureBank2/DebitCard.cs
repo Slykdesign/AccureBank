@@ -18,9 +18,18 @@ namespace AccureBank2
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-            MainMenu Obj = new MainMenu();
-            Obj.Show();
-            this.Hide();
+            if (UserSession.Role == "Admin")
+            {
+                MainMenu adminMenu = new MainMenu();
+                adminMenu.Show();
+                this.Hide();
+            }
+            else if (UserSession.Role == "Agent")
+            {
+                MainMenu2 agentMenu = new MainMenu2();
+                agentMenu.Show();
+                this.Hide();
+            }
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -96,7 +105,7 @@ namespace AccureBank2
             try
             {
                 Con.Open();
-                SqlCommand cmd = new SqlCommand("UPDATE AccountTbl SET AcDebCardNum = @CardNum WHERE AcNum = @AcNum", Con);
+                SqlCommand cmd = new SqlCommand("UPDATE AccountTbl SET AcDCNum = @CardNum WHERE AcNum = @AcNum", Con);
                 cmd.Parameters.AddWithValue("@CardNum", NewCardNumTb.Text);
                 cmd.Parameters.AddWithValue("@AcNum", AcNumTb.Text);
                 int rowsAffected = cmd.ExecuteNonQuery();
@@ -129,7 +138,7 @@ namespace AccureBank2
             try
             {
                 Con.Open();
-                SqlCommand cmd = new SqlCommand("UPDATE AccountTbl SET AcDebCardNum = @NewCardNum WHERE AcNum = @AcNum AND AcDebCardNum = @CurrentCardNum", Con);
+                SqlCommand cmd = new SqlCommand("UPDATE AccountTbl SET AcDCNum = @NewCardNum WHERE AcNum = @AcNum AND AcDCNum = @CurrentCardNum", Con);
                 cmd.Parameters.AddWithValue("@NewCardNum", NewCardNumTb.Text);
                 cmd.Parameters.AddWithValue("@AcNum", AcNumTb.Text);
                 cmd.Parameters.AddWithValue("@CurrentCardNum", CardNumTb.Text);
@@ -163,7 +172,7 @@ namespace AccureBank2
             try
             {
                 Con.Open();
-                SqlCommand cmd = new SqlCommand("UPDATE AccountTbl SET AcDebCardNum = NULL WHERE AcNum = @AcNum AND AcDebCardNum = @CurrentCardNum", Con);
+                SqlCommand cmd = new SqlCommand("UPDATE AccountTbl SET AcDCNum = NULL WHERE AcNum = @AcNum AND AcDCNum = @CurrentCardNum", Con);
                 cmd.Parameters.AddWithValue("@AcNum", AcNumTb.Text);
                 cmd.Parameters.AddWithValue("@CurrentCardNum", CardNumTb.Text);
                 int rowsAffected = cmd.ExecuteNonQuery();
@@ -190,7 +199,7 @@ namespace AccureBank2
             if (ActionCb.SelectedItem != null)
             {
                 string selectedAction = ActionCb.SelectedItem.ToString();
-                if (selectedAction == "Assign" || selectedAction == "Reassing")
+                if (selectedAction == "Assign" || selectedAction == "Reassign")
                 {
                     NewCardNumTb.Visible = true;
                     CardNumTb.Visible = false;
@@ -221,6 +230,11 @@ namespace AccureBank2
                     ClearTextBoxes(control); // Recursively clear text boxes in child controls
                 }
             }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

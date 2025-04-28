@@ -44,25 +44,25 @@ namespace AccureBank2
                 }
                 else if (ThemeCb.SelectedIndex == 1)
                 {
-                    panel1.BackColor = Color.Blue;
+                    panel1.BackColor = Color.DarkGreen;
                 }
                 else if (ThemeCb.SelectedIndex == 2)
                 {
-                    panel1.BackColor = Color.Green;
+                    panel1.BackColor = Color.Crimson;
                 }
                 else if (ThemeCb.SelectedIndex == 3)
                 {
-                    panel1.BackColor = Color.Crimson;
+                    panel1.BackColor = Color.HotPink;
                 }
                 else if (ThemeCb.SelectedIndex == 4)
                 {
-                    panel1.BackColor = Color.HotPink;
+                    panel1.BackColor = Color.DarkOrange;
                 }
                 else
                 {
-                    panel1.BackColor = Color.Goldenrod;
+                    panel1.BackColor = Color.Blue;
                 }
-                if (panel1.BackColor == Color.Blue || panel1.BackColor == Color.Red || panel1.BackColor == Color.Crimson)
+                if (panel1.BackColor == Color.Blue || panel1.BackColor == Color.Red || panel1.BackColor == Color.DarkGreen || panel1.BackColor == Color.Crimson)
                 {
                     foreach (Control control in panel1.Controls)
                     {
@@ -72,9 +72,8 @@ namespace AccureBank2
                         }
                     }
                 }
-                else
+                else if (panel1.BackColor == Color.HotPink || panel1.BackColor == Color.DarkOrange)
                 {
-                    // Reset text color to default (black) for other background colors
                     foreach (Control control in panel1.Controls)
                     {
                         if (control is Label || control is Button)
@@ -88,6 +87,13 @@ namespace AccureBank2
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\13309\OneDrive - Youngstown State University\Documents\Bank.Db.mdf"";Integrated Security=True;Connect Timeout=30");
         private void button1_Click(object sender, EventArgs e)
         {
+            if (UserSession.Role == "Agent") // Check if the user is an agent
+            {
+                MessageBox.Show("You are not authorized to change this person's password!");
+                NewPasswordTb.Text = ""; // Reset the text box
+                return;
+            }
+
             if (NewPasswordTb.Text == "")
             {
                 MessageBox.Show("Enter new password");
@@ -114,8 +120,16 @@ namespace AccureBank2
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            MainMenu Obj = new MainMenu();
-            Obj.Show();
+            if (UserSession.Role == "Admin")
+            {
+                MainMenu adminMenu = new MainMenu();
+                adminMenu.Show();
+            }
+            else if (UserSession.Role == "Agent")
+            {
+                MainMenu2 agentMenu = new MainMenu2();
+                agentMenu.Show();
+            }
             this.Hide();
         }
 
@@ -129,6 +143,13 @@ namespace AccureBank2
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Transactions Obj = new Transactions();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            DebitCard Obj = new DebitCard();
             Obj.Show();
             this.Hide();
         }
